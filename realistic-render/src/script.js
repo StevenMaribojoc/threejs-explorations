@@ -67,7 +67,6 @@ rgbeLoader.load('/environmentMaps/0/2k.hdr', (environmentMap) =>
 /**
  * Models
  */
-Helmet
 gltfLoader.load(
     '/models/FlightHelmet/glTF/FlightHelmet.gltf',
     (gltf) =>
