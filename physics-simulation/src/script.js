@@ -149,7 +149,7 @@ const playHitSound = (collision) => {
         let normedImpact = impactStrength > 8.0 ? 8.0 : impactStrength
         hitSound.volume = (normedImpact-1.5) / 6.5
         hitSound.currentTime = 0
-        hitSound.play()
+        hitSound.play().catch(() => {})
     }
 
 }
