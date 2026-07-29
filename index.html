@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>three.js explorations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --white: #ffffff;
+      --ink: #1a1a1a;
+      --ink-mid: #3a3a3a;
+      --blue-hover: #4a7ab5;
+      --blue-dim: #7aa3cc;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--white);
+      font-family: 'DM Mono', 'Courier New', monospace;
+      color: var(--ink);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background overlay image — place your Aseprite PNG at /bg.png */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url('/bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px;
+      max-width: 680px;
+    }
+
+    header {
+      margin-bottom: 64px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      color: var(--blue-dim);
+      text-transform: lowercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      max-width: 380px;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .project-link {
+      display: block;
+      text-decoration: none;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      transition:
+        color 0.2s ease,
+        transform 0.25s ease,
+        letter-spacing 0.25s ease;
+    }
+
+    .project-link:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .project-link:hover {
+      color: var(--blue-hover);
+      transform: translateY(-3px);
+      letter-spacing: 0.04em;
+    }
+
+    .project-name {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: inherit;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .project-desc {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: #888;
+      display: block;
+      transition: color 0.2s ease;
+    }
+
+    .project-link:hover .project-desc {
+      color: var(--blue-dim);
+    }
+
+    footer {
+      margin-top: 64px;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: #bbb;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 60px 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .project-link {
+        transition: color 0.2s ease;
+      }
+      .project-link:hover {
+        transform: none;
+        letter-spacing: 0.01em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="eyebrow">three.js / webgl</p>
+      <h1>a collection of graphics experiments: rendering, shaders, geometry, and light.</h1>
+    </header>
+
+    <nav>
+      <a class="project-link" href="/shaders">
+        <span class="project-name">shaders</span>
+        <span class="project-desc">custom glsl vertex and fragment shaders from scratch</span>
+      </a>
+
+      <a class="project-link" href="/raging-sea">
+        <span class="project-name">raging sea</span>
+        <span class="project-desc">vertex displacement ocean driven by custom glsl uniforms</span>
+      </a>
+
+      <a class="project-link" href="/galaxy-generator">
+        <span class="project-name">galaxy generator</span>
+        <span class="project-desc">procedural particle geometry with live parameter control</span>
+      </a>
+
+      <a class="project-link" href="/physics-simulation">
+        <span class="project-name">physics simulation</span>
+        <span class="project-desc">rigid body physics with cannon.js and a live debug overlay</span>
+      </a>
+
+      <a class="project-link" href="/haunted-house">
+        <span class="project-name">haunted house</span>
+        <span class="project-desc">atmosphere through shadow mapping, fog, and point lights</span>
+      </a>
+
+      <a class="project-link" href="/realistic-render">
+        <span class="project-name">realistic render</span>
+        <span class="project-desc">pbr materials and environment map reflections</span>
+      </a>
+    </nav>
+
+    <footer>
+      built with three.js + vite
+    </footer>
+  </div>
+</body>
+</html>
