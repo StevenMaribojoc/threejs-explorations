@@ -1,10 +1,16 @@
 {
   "rewrites": [
-    { "source": "/shaders/(.*)", "destination": "/shaders/$1" },
-    { "source": "/raging-sea/(.*)", "destination": "/raging-sea/$1" },
-    { "source": "/galaxy-generator/(.*)", "destination": "/galaxy-generator/$1" },
-    { "source": "/physics-simulation/(.*)", "destination": "/physics-simulation/$1" },
-    { "source": "/haunted-house/(.*)", "destination": "/haunted-house/$1" },
-    { "source": "/realistic-render/(.*)", "destination": "/realistic-render/$1" }
+    { "source": "/shaders", "destination": "/shaders/dist/index.html" },
+    { "source": "/shaders/(.*)", "destination": "/shaders/dist/$1" },
+    { "source": "/raging-sea", "destination": "/raging-sea/dist/index.html" },
+    { "source": "/raging-sea/(.*)", "destination": "/raging-sea/dist/$1" },
+    { "source": "/galaxy-generator", "destination": "/galaxy-generator/dist/index.html" },
+    { "source": "/galaxy-generator/(.*)", "destination": "/galaxy-generator/dist/$1" },
+    { "source": "/physics-simulation", "destination": "/physics-simulation/dist/index.html" },
+    { "source": "/physics-simulation/(.*)", "destination": "/physics-simulation/dist/$1" },
+    { "source": "/haunted-house", "destination": "/haunted-house/dist/index.html" },
+    { "source": "/haunted-house/(.*)", "destination": "/haunted-house/dist/$1" },
+    { "source": "/realistic-render", "destination": "/realistic-render/dist/index.html" },
+    { "source": "/realistic-render/(.*)", "destination": "/realistic-render/dist/$1" }
   ]
 }
