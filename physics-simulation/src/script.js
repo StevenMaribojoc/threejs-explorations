@@ -25,12 +25,12 @@ const textureLoader = new THREE.TextureLoader()
 const cubeTextureLoader = new THREE.CubeTextureLoader()
 
 const environmentMapTexture = cubeTextureLoader.load([
-    '/textures/environmentMaps/0/px.png',
-    '/textures/environmentMaps/0/nx.png',
-    '/textures/environmentMaps/0/py.png',
-    '/textures/environmentMaps/0/ny.png',
-    '/textures/environmentMaps/0/pz.png',
-    '/textures/environmentMaps/0/nz.png'
+    '/physics-simulation/dist/textures/environmentMaps/0/px.png',
+    '/physics-simulation/dist/textures/environmentMaps/0/nx.png',
+    '/physics-simulation/dist/textures/environmentMaps/0/py.png',
+    '/physics-simulation/dist/textures/environmentMaps/0/ny.png',
+    '/physics-simulation/dist/textures/environmentMaps/0/pz.png',
+    '/physics-simulation/dist/textures/environmentMaps/0/nz.png'
 ])
 
 /**
@@ -133,7 +133,7 @@ world.allowSleep = true
 /**
  * Sounds
  */
-const hitSound = new Audio('/sounds/hit.mp3')
+const hitSound = new Audio('/physics-simulation/dist/sounds/hit.mp3')
 
 const playHitSound = (collision) => {
 
