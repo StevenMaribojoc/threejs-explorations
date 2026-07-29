@@ -1,2 +1,11 @@
-node_modules
+**/node_modules/
 .DS_Store
+**/dist/
+
+# Re-include built project dist folders
+!shaders/dist/
+!raging-sea/dist/
+!galaxy-generator/dist/
+!haunted-house/dist/
+!physics-simulation/dist/
+!realistic-render/dist/
