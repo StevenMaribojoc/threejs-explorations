@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/shaders/(.*)", "destination": "/shaders/$1" },
+    { "source": "/raging-sea/(.*)", "destination": "/raging-sea/$1" },
+    { "source": "/galaxy-generator/(.*)", "destination": "/galaxy-generator/$1" },
+    { "source": "/physics-simulation/(.*)", "destination": "/physics-simulation/$1" },
+    { "source": "/haunted-house/(.*)", "destination": "/haunted-house/$1" },
+    { "source": "/realistic-render/(.*)", "destination": "/realistic-render/$1" }
+  ]
+}
