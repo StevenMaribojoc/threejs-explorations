@@ -11,6 +11,10 @@
     { "source": "/haunted-house", "destination": "/haunted-house/dist/index.html" },
     { "source": "/haunted-house/(.*)", "destination": "/haunted-house/dist/$1" },
     { "source": "/realistic-render", "destination": "/realistic-render/dist/index.html" },
-    { "source": "/realistic-render/(.*)", "destination": "/realistic-render/dist/$1" }
+    { "source": "/realistic-render/(.*)", "destination": "/realistic-render/dist/$1" },
+    { "source": "/textures/(.*)", "destination": "/haunted-house/dist/textures/$1" },
+    { "source": "/models/(.*)", "destination": "/realistic-render/dist/models/$1" },
+    { "source": "/environmentMaps/(.*)", "destination": "/realistic-render/dist/environmentMaps/$1" },
+    { "source": "/draco/(.*)", "destination": "/realistic-render/dist/draco/$1" }
   ]
 }
